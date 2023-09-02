@@ -1,0 +1,341 @@
+object FormMain: TFormMain
+  Left = 293
+  Height = 640
+  Top = 119
+  Width = 1410
+  Caption = 'BOM Manager V1.3122'
+  ClientHeight = 640
+  ClientWidth = 1410
+  Constraints.MinHeight = 640
+  Constraints.MinWidth = 1000
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 297
+    Top = 0
+    Width = 1410
+    Align = alTop
+    ClientHeight = 297
+    ClientWidth = 1410
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    object Panel4: TPanel
+      Left = 1
+      Height = 42
+      Top = 1
+      Width = 1408
+      Align = alTop
+      ClientHeight = 42
+      ClientWidth = 1408
+      TabOrder = 0
+      object ButtonLoad1: TButton
+        Left = 10
+        Height = 25
+        Hint = '載入料單至上表格內，通常是由EASYEDA自動產生的BOM'
+        Top = 8
+        Width = 75
+        Caption = 'Load'
+        OnClick = ButtonLoad1Click
+        TabOrder = 0
+      end
+      object ButtonSave1: TButton
+        Left = 570
+        Height = 25
+        Hint = '儲存成材料清單，該單格式由syo-bom.xlt檔設置'
+        Top = 8
+        Width = 75
+        Caption = 'Save'
+        OnClick = ButtonSave1Click
+        TabOrder = 1
+      end
+      object ButtonFormat1: TButton
+        Left = 90
+        Height = 25
+        Hint = '把上表格格式化成所需的標準模式'
+        Top = 8
+        Width = 75
+        Caption = 'Format'
+        OnClick = ButtonFormat1Click
+        TabOrder = 2
+      end
+      object ButtonUpdate: TButton
+        Left = 170
+        Height = 25
+        Hint = '經核對下總表內容后更新上表格'
+        Top = 8
+        Width = 75
+        Caption = 'Update'
+        OnClick = ButtonUpdateClick
+        TabOrder = 3
+      end
+      object ButtonInsert1: TButton
+        Left = 250
+        Height = 25
+        Hint = '依上表格游標位置，其上方插入一空白行'
+        Top = 8
+        Width = 75
+        Caption = 'Insert'
+        OnClick = ButtonInsert1Click
+        TabOrder = 4
+      end
+      object ButtonRemove1: TButton
+        Left = 330
+        Height = 25
+        Hint = '依上表格游標位置，刪除該行'
+        Top = 8
+        Width = 75
+        Caption = 'Remove'
+        OnClick = ButtonRemove1Click
+        TabOrder = 5
+      end
+      object ButtonCopy1: TButton
+        Left = 410
+        Height = 25
+        Hint = '依上表格游標位置，複製到下總表的游標位置行'
+        Top = 8
+        Width = 75
+        Caption = 'Copy'
+        OnClick = ButtonCopy1Click
+        TabOrder = 6
+      end
+      object ButtonRenum1: TButton
+        Left = 490
+        Height = 25
+        Hint = '從新重編上表格最左側的編號'
+        Top = 8
+        Width = 75
+        Caption = 'Renum'
+        OnClick = ButtonRenum1Click
+        TabOrder = 7
+      end
+      object Edit1: TEdit
+        Left = 730
+        Height = 23
+        Hint = '顯示上表格游標位置內容，修改后必須按下ENTER按鍵'
+        Top = 10
+        Width = 154
+        OnKeyDown = Edit1KeyDown
+        TabOrder = 8
+      end
+      object ButtonOrder: TButton
+        Left = 650
+        Height = 25
+        Hint = '儲存成請申購單，該單格式由syo-order.xlt檔設置'
+        Top = 8
+        Width = 75
+        Caption = 'Order'
+        OnClick = ButtonOrderClick
+        TabOrder = 9
+      end
+    end
+    object StringGrid1: TStringGrid
+      Left = 1
+      Height = 253
+      Top = 43
+      Width = 1408
+      Align = alClient
+      ColCount = 11
+      RowCount = 11
+      TabOrder = 1
+      OnClick = StringGrid1Click
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 296
+    Top = 302
+    Width = 1410
+    Align = alClient
+    ClientHeight = 296
+    ClientWidth = 1410
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    object Panel5: TPanel
+      Left = 1
+      Height = 42
+      Top = 1
+      Width = 1408
+      Align = alTop
+      ClientHeight = 42
+      ClientWidth = 1408
+      TabOrder = 0
+      object ButtonLoad2: TButton
+        Left = 10
+        Height = 25
+        Hint = '載入下總表，通常是指整合所有料單後的總表'
+        Top = 8
+        Width = 75
+        Caption = 'Load'
+        OnClick = ButtonLoad2Click
+        TabOrder = 0
+      end
+      object ButtonSave2: TButton
+        Left = 410
+        Height = 25
+        Hint = '儲存成總表，該總表格式由syo-stock.xlt檔設置'
+        Top = 8
+        Width = 75
+        Caption = 'Save'
+        OnClick = ButtonSave2Click
+        TabOrder = 1
+      end
+      object ButtonInsert2: TButton
+        Left = 90
+        Height = 25
+        Hint = '依下總表游標位置，其上方插入一空白行'
+        Top = 8
+        Width = 75
+        Caption = 'Insert'
+        OnClick = ButtonInsert2Click
+        TabOrder = 2
+      end
+      object ButtonRemove2: TButton
+        Left = 170
+        Height = 25
+        Hint = '依下總表游標位置，刪除該行'
+        Top = 8
+        Width = 75
+        Caption = 'Remove'
+        OnClick = ButtonRemove2Click
+        TabOrder = 3
+      end
+      object ButtonCopy2: TButton
+        Left = 250
+        Height = 25
+        Hint = '依下總表游標位置，複製到上表格的游標位置行'
+        Top = 8
+        Width = 75
+        Caption = 'Copy'
+        OnClick = ButtonCopy2Click
+        TabOrder = 4
+      end
+      object ButtonRenum2: TButton
+        Left = 330
+        Height = 25
+        Hint = '從新重編下總表最左側的編號'
+        Top = 8
+        Width = 75
+        Caption = 'Renum'
+        OnClick = ButtonRenum2Click
+        TabOrder = 5
+      end
+      object ComboBox1: TComboBox
+        Left = 810
+        Height = 23
+        Top = 10
+        Width = 154
+        ItemHeight = 15
+        OnChange = ComboBox1Change
+        TabOrder = 6
+      end
+      object ComboBox2: TComboBox
+        Left = 970
+        Height = 23
+        Top = 10
+        Width = 154
+        ItemHeight = 15
+        OnChange = ComboBox2Change
+        TabOrder = 7
+      end
+      object Edit2: TEdit
+        Left = 490
+        Height = 23
+        Hint = '顯示下總表游標位置內容，修改后必須按下ENTER按鍵'
+        Top = 10
+        Width = 154
+        OnKeyDown = Edit2KeyDown
+        TabOrder = 8
+      end
+      object EditFind: TEdit
+        Left = 650
+        Height = 23
+        Hint = '文字搜尋欄位，輸入文字后按下ENTER搜尋'
+        Top = 10
+        Width = 154
+        OnKeyDown = EditFindKeyDown
+        TabOrder = 9
+      end
+    end
+    object StringGrid2: TStringGrid
+      Left = 1
+      Height = 252
+      Top = 43
+      Width = 1408
+      Align = alClient
+      ColCount = 11
+      RowCount = 11
+      TabOrder = 1
+      OnClick = StringGrid2Click
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 42
+    Top = 598
+    Width = 1410
+    Align = alBottom
+    ClientHeight = 42
+    ClientWidth = 1410
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    object ButtonExit: TButton
+      Left = 1067
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Exit'
+      OnClick = ButtonExitClick
+      TabOrder = 0
+    end
+    object ProgressBar: TProgressBar
+      Left = 960
+      Height = 20
+      Top = 11
+      Width = 100
+      TabOrder = 1
+    end
+    object ButtonCheck1: TButton
+      Left = 10
+      Height = 25
+      Hint = '檢查下總表自編料號內容，避免跳號重號等錯誤發生'
+      Top = 8
+      Width = 75
+      Caption = 'Check1'
+      OnClick = ButtonCheck1Click
+      TabOrder = 2
+    end
+    object ButtonCheck2: TButton
+      Left = 90
+      Height = 25
+      Hint = '檢查下總表供應商料號內容，避免跳號重號等錯誤發生'
+      Top = 8
+      Width = 75
+      Caption = 'Check2'
+      OnClick = ButtonCheck2Click
+      TabOrder = 3
+    end
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 5
+    Top = 297
+    Width = 1410
+    Align = alTop
+    ResizeAnchor = akTop
+  end
+  object OpenDialog: TOpenDialog
+    Left = 762
+    Top = 94
+  end
+  object SaveDialog: TSaveDialog
+    Left = 762
+    Top = 154
+  end
+end
