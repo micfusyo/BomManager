@@ -8,9 +8,10 @@
       <Unit>
         <Filename Value="BomManager.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="1"/>
         <CursorPos Y="24"/>
         <UsageCount Value="66"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="unitmain.pas"/>
@@ -20,10 +21,10 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitMain"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="541"/>
+        <TopLine Value="544"/>
         <CursorPos X="34" Y="566"/>
         <UsageCount Value="66"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="unitself.pas"/>
@@ -43,9 +44,6 @@
         <UsageCount Value="9"/>
       </Unit>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
     <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
